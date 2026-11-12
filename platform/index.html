@@ -202,7 +202,7 @@
         <h1>Better Data. Smarter Ads. <span class="mint">Clearer Results.</span></h1>
         <p class="lede">SyncTada connects your ad platforms and CRM, so you can see which campaigns create customers and revenue, give ad algorithms better signals, and share results everyone understands.</p>
         <div class="btn-row" style="margin-top:28px">
-          <a class="btn btn-primary" href="/book-demo/">Book a Demo <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-primary" href="/book-demo/" data-cta="page-hero">Book a Demo <span class="arrow" aria-hidden="true">&rarr;</span></a>
           <a class="btn btn-ghost" href="/how-it-works/">See How It Works</a>
         </div>
       </div>
@@ -280,7 +280,7 @@
           </div>
           <div>
             
-<div class="table-wrap reveal">
+<div tabindex="0" role="region" aria-label="What is automated vs. recommended table" class="table-wrap reveal">
 <table class="resp">
   <caption class="sr-only">What SyncTada automates, recommends, or leaves for human approval</caption>
   <thead><tr><th scope="col">What happens</th><th scope="col">Who / how</th></tr></thead>
@@ -320,6 +320,84 @@
       </div>
     </section>
 
+    <section class="section section--line" id="example">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Example report</p><h2>What the Software Reveals. What the Team Does About It.</h2><p>Follow one customer from a Google Search ad to revenue recorded in the CRM, then see how a two-campaign comparison turns into a specific next test.</p></div>
+        <div style="max-width:880px">
+<figure class="report reveal" aria-labelledby="journey-detail-cap">
+  <div class="report-head">
+    <span class="r-title" id="journey-detail-cap">Customer journey: ad to CRM revenue</span>
+    <span class="r-sub">Example: a fictional home-services company</span>
+    <span class="mock-tag">Illustrative</span>
+  </div>
+  <div class="report-body">
+    <ol class="journey journey--detail">
+      <li><span class="j-step">Day 1 · 8:52 AM</span><div><strong>Ad click: Google Search, "Furnace Repair"</strong><span class="j-meta">Keyword "furnace repair near me." The visit is tagged with the campaign source.</span></div></li>
+      <li><span class="j-step">Day 1 · 8:55 AM</span><div><strong>Tracked call, 4 min 12 sec</strong><span class="j-meta">Placed to the tracking number shown to this campaign's visitors. A new CRM contact is created with the source attached.</span></div></li>
+      <li><span class="j-step">Day 1 · 9:40 AM</span><div><strong>Marked qualified in the CRM</strong><span class="j-meta">In the service area, needs a replacement, not a parts inquiry.</span><span class="j-signal">Can be sent to Google Ads as a conversion*</span></div></li>
+      <li><span class="j-step">Day 2</span><div><strong>Estimate booked, then attended</strong><span class="j-meta">Appointment stages recorded in the CRM.</span><span class="j-signal">Can be sent to Google Ads as a conversion*</span></div></li>
+      <li><span class="j-step">Day 4</span><div><strong>Job won: furnace replacement</strong><span class="j-meta">Deal closed in the CRM by the sales team.</span></div></li>
+      <li class="j-win"><span class="j-step">Day 4</span><div><strong>$6,850 CRM-recorded revenue</strong><span class="j-meta">Attributed to Google Search "Furnace Repair" in reporting.</span><span class="j-signal">Can be sent with its value as a conversion*</span></div></li>
+    </ol>
+  </div>
+</figure>
+<p class="illustrative" style="text-align:left">Fictional company and data. *When the platform supports it, the conversion action is configured, and the event can be matched to the original click or call.</p></div>
+        <div class="example-grid" style="margin-top:36px">
+          
+<div class="report reveal">
+  <div class="report-head">
+    <span class="r-title">Cheaper leads aren't always cheaper customers</span>
+    <span class="r-sub">October, two campaigns</span>
+    <span class="mock-tag">Illustrative</span>
+  </div>
+  <div class="report-body">
+    <div tabindex="0" role="region" aria-label="Campaign comparison table" class="table-wrap">
+    <table class="compare">
+      <caption class="sr-only">Illustrative two-campaign comparison: spend, leads, customers, cost per lead, and cost per customer</caption>
+      <thead><tr><th scope="col">Campaign</th><th scope="col">Spend</th><th scope="col">Leads</th><th scope="col">Customers</th><th scope="col">Cost / lead</th><th scope="col">Cost / customer</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Meta: "Free Estimate" lead form</th><td>$3,000</td><td>150</td><td>6</td><td class="best">$20</td><td class="worse">$500</td></tr>
+        <tr><th scope="row">Google Search: "Furnace Repair"</th><td>$4,500</td><td>90</td><td>15</td><td class="worse">$50</td><td class="best">$300</td></tr>
+      </tbody>
+      <tfoot><tr><th scope="row">Both campaigns</th><td>$7,500</td><td>240</td><td>21</td><td>$31.25</td><td>$357</td></tr></tfoot>
+    </table>
+    </div>
+    <p class="small muted" style="margin:0">The Meta form produces leads at less than half the cost, but only 4% became customers, compared with about 17% from Google Search.</p>
+  </div>
+</div>
+          
+<aside class="am-card reveal" aria-labelledby="am-title">
+  <div class="am-who"><span class="avatar" aria-hidden="true">AM</span><div><strong id="am-title" style="font-family:var(--font-head)">Account manager recommendation</strong><br><span class="small muted">Illustrative</span></div></div>
+  <dl>
+    <div><dt>Next test</dt><dd>Move $1,000 of next month's Meta budget to Google Search "Furnace Repair," and add a service-area question to the Meta form.</dd></div>
+    <div><dt>How we'll judge it</dt><dd>After four weeks, compare cost per customer and booked estimates by campaign against October.</dd></div>
+    <div><dt>Success looks like</dt><dd>Blended cost per customer below $357, with total customers flat or higher.<span class="muted" style="display:block">If Google's cost per customer climbs as spend increases, we roll the change back.</span></dd></div>
+  </dl>
+</aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--line">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">From finding to action</p><h2>How CRM Outcomes Become Better Campaigns</h2><p>SyncTada matches each lead to the campaign that produced it, then follows it through your CRM stages: qualified, poor fit, booked, attended, sold. Those findings feed four things: reporting, audience exclusions, conversion feedback to ad platforms, and campaign tests.</p></div>
+        
+<div tabindex="0" role="region" aria-label="CRM outcomes and ad platform events table" class="table-wrap reveal">
+<table class="resp signals">
+  <caption class="sr-only">How SyncTada uses each CRM outcome, and what a supported ad platform can receive</caption>
+  <thead><tr><th scope="col">What the CRM records</th><th scope="col">How SyncTada uses it</th><th scope="col">What a supported ad platform can receive</th></tr></thead>
+  <tbody>
+    <tr><td>Qualified lead</td><td>Lead quality by campaign, ad, and keyword in reporting</td><td>A conversion event, such as a CRM lead-stage event through Meta's Conversions API or an offline conversion in Google Ads</td></tr>
+    <tr><td>Poor-fit or disqualified inquiry</td><td>Lead-quality comparisons, wasted-spend findings, and ideas for tests (like a qualifying form question)</td><td>Usually nothing. Most platforms don't accept a "negative" conversion. Campaigns improve by optimizing toward qualified and later-stage events instead. Some platforms can adjust or retract a conversion already sent, depending on setup.</td></tr>
+    <tr><td>Booked or attended appointment</td><td>Funnel reporting and candidate exclusion audiences</td><td>A conversion event, where the platform supports it and the conversion action is configured</td></tr>
+    <tr><td>Sale and revenue</td><td>Attributed revenue, ROAS, and existing-customer exclusions</td><td>A conversion event with its value, where supported</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="illustrative" style="text-align:left">Events must be matched to the original click, call, or person (using identifiers the platform accepts, with consent). Accepted events, matching, and eligibility differ by platform. Audience use follows platform policies; regulated industries such as housing, finance, and insurance may have restrictions.</p>
+      </div>
+    </section>
+
     <section class="section section--line">
       <div class="container">
         <div class="section-head"><p class="eyebrow">Common questions</p><h2>Platform FAQ</h2></div>
@@ -332,8 +410,8 @@
         <div class="cta-band reveal">
           <h2>See the Platform With Your Own Data in Mind.</h2>
           <p>We'll walk through how SyncTada would connect to your CRM and ad accounts, and what you could measure first.</p>
-          <div class="btn-row"><a class="btn btn-primary" href="/book-demo/">Book a Demo <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
-          <p class="fine">Includes a free audit and personalized three-month plan for eligible prospects.</p>
+          <div class="btn-row"><a class="btn btn-primary" href="/book-demo/" data-cta="final">Book a Demo <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
+          <p class="fine">Eligible teams receive a free audit and a personalized 90-day optimization plan after the demo.</p>
         </div>
       </div>
     </section>

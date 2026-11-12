@@ -115,7 +115,7 @@
 }
   </script>
 </head>
-<body>
+<body data-audience="agency">
 <!-- header:start -->
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
@@ -164,7 +164,7 @@
         <h1>Prove Your Value. Improve Results. <span class="mint">Retain More Clients.</span></h1>
         <p class="lede">Built for agencies serving lead-generation businesses: home services, mortgage, insurance, financial services, legal, and others that turn calls and appointments into sales.</p>
         <div class="btn-row" style="margin-top:28px">
-          <a class="btn btn-primary" href="/book-demo/">Book a Demo <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-primary" href="/book-demo/?for=agency" data-cta="page-hero">Book a Demo <span class="arrow" aria-hidden="true">&rarr;</span></a>
           <a class="btn btn-ghost" href="/platform/">See the Platform</a>
         </div>
       </div>
@@ -204,21 +204,31 @@
           <p class="eyebrow">White-label</p>
           <h2>Your Brand on Every Report.</h2>
           <p class="muted">Present dashboards and monthly reports as part of your agency's service. Clients see outcomes they care about, booked jobs, policies, closed loans, signed cases, under your name.</p>
-          <p class="small muted">Exact white-label customization options are confirmed during onboarding.</p>
+          <ul class="ticks "><li>Dashboards and monthly reports under your agency's name</li><li>Outcomes clients care about: booked jobs, closed loans, signed cases</li><li>Findings and a recommended next step in every report</li></ul>
+          <p class="small muted" style="margin-top:16px">Exact white-label customization options are confirmed during onboarding.</p>
         </div>
-        
-<div class="mock reveal" role="img" aria-label="Illustrative white-label client dashboard">
-  <div class="mock-bar"><div class="wl-brand"><span class="wl-logo"></span>Your Agency</div><span class="mock-tag">Illustrative</span></div>
-  <div class="mock-body">
-    <div class="kpis">
-      <div class="kpi"><div class="label">Calls</div><div class="value">164</div><div class="delta">&uarr; 8%</div></div>
-      <div class="kpi"><div class="label">Booked</div><div class="value">131</div><div class="delta">&uarr; 12%</div></div>
-      <div class="kpi hl"><div class="label">ROAS</div><div class="value">5.2x</div></div>
-    </div>
-    <div class="report-bars" aria-hidden="true"><b style="height:40%"></b><b style="height:48%"></b><b style="height:45%"></b><b style="height:57%"></b><b style="height:62%"></b><b style="height:70%"></b><b style="height:83%"></b><b style="height:95%"></b></div>
-    <div class="kpi" style="font-size:.8rem"><span class="mint" style="font-weight:600">Key finding:</span> <span class="muted">Call leads close at 2x the rate of form leads.</span></div>
+        <div>
+<div class="report reveal">
+  <div class="report-head">
+    <span class="r-title">Cheaper leads aren't always cheaper customers</span>
+    <span class="r-sub">October, two campaigns</span>
+    <span class="mock-tag">Illustrative</span>
   </div>
-</div>
+  <div class="report-body">
+    <div tabindex="0" role="region" aria-label="Campaign comparison table" class="table-wrap">
+    <table class="compare">
+      <caption class="sr-only">Illustrative two-campaign comparison: spend, leads, customers, cost per lead, and cost per customer</caption>
+      <thead><tr><th scope="col">Campaign</th><th scope="col">Spend</th><th scope="col">Leads</th><th scope="col">Customers</th><th scope="col">Cost / lead</th><th scope="col">Cost / customer</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Meta: "Free Estimate" lead form</th><td>$3,000</td><td>150</td><td>6</td><td class="best">$20</td><td class="worse">$500</td></tr>
+        <tr><th scope="row">Google Search: "Furnace Repair"</th><td>$4,500</td><td>90</td><td>15</td><td class="worse">$50</td><td class="best">$300</td></tr>
+      </tbody>
+      <tfoot><tr><th scope="row">Both campaigns</th><td>$7,500</td><td>240</td><td>21</td><td>$31.25</td><td>$357</td></tr></tfoot>
+    </table>
+    </div>
+    <p class="small muted" style="margin:0">The Meta form produces leads at less than half the cost, but only 4% became customers, compared with about 17% from Google Search.</p>
+  </div>
+</div><p class="illustrative">Fictional data. The kind of insight that's hard to show from ad-platform numbers alone.</p></div>
       </div>
     </section>
 
@@ -238,10 +248,32 @@
     <section class="section">
       <div class="container">
         <div class="cta-band reveal">
-          <h2>Show Clients What Your Work Is Worth.</h2>
-          <p>See how SyncTada can help your agency prove value, improve campaigns, and keep clients longer.</p>
-          <div class="btn-row"><a class="btn btn-primary" href="/book-demo/">Book a Demo <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
-          <p class="fine">Includes a free audit and personalized three-month plan for eligible prospects.</p>
+          <div class="cta-split">
+            <div>
+              <p class="eyebrow">Sample client report</p>
+              <h2>Show Clients What Your Work Is Worth.</h2>
+              <p>See how you'd present results to a client under your own brand.</p>
+              <div class="btn-row"><a class="btn btn-primary" href="/book-demo/?for=agency" data-cta="final">Book a Demo <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
+              <p class="fine" style="text-align:left;margin-left:0">Eligible agencies receive a free audit and a personalized 90-day optimization plan after the demo.</p>
+            </div>
+            
+<div class="mock" role="img" aria-label="Illustrative monthly client report branded with an agency's logo, showing booked appointments, customers, attributed revenue, and a recommended next step">
+  <div class="mock-bar">
+    <div class="wl-brand"><span class="wl-logo"></span>Your Agency</div>
+    <span class="wl-client">Client: Example Home Services Co.</span>
+    <span class="mock-tag">Illustrative</span>
+  </div>
+  <div class="mock-body">
+    <div class="kpis">
+      <div class="kpi"><div class="label">Booked</div><div class="value">58</div><div class="delta">&uarr; 12% vs Sept</div></div>
+      <div class="kpi"><div class="label">Customers</div><div class="value">21</div><div class="delta">&uarr; 9% vs Sept</div></div>
+      <div class="kpi hl"><div class="label">Revenue</div><div class="value">$98k</div><div class="delta">Attributed</div></div>
+    </div>
+    <div class="report-bars" aria-hidden="true"><b style="height:38%"></b><b style="height:46%"></b><b style="height:44%"></b><b style="height:58%"></b><b style="height:63%"></b><b style="height:71%"></b><b style="height:82%"></b><b style="height:94%"></b></div>
+    <div class="kpi" style="font-size:.8rem"><span class="mint" style="font-weight:600">Next step:</span> <span class="muted">Shift $1,000 from the Meta form to Google Search; review in four weeks.</span></div>
+  </div>
+</div>
+          </div>
         </div>
       </div>
     </section>
