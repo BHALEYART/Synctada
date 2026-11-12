@@ -18,7 +18,18 @@ assets/css/styles.css        Design system (navy #2B3856, mint #3DED97)
 assets/js/main.js            Shared header/footer, nav, forms, animations
 ```
 
-Header and footer are injected by `assets/js/main.js`, so nav changes happen in one place.
+Header and footer live in `partials/` and are baked into every page as static HTML (better for SEO and screen readers). After editing either partial, run:
+
+    python3 scripts/sync-partials.py
+
+That rewrites the block between the `header:start/end` and `footer:start/end` markers on every page and marks the current page's nav link with `aria-current="page"`.
+
+## Accessibility & SEO
+
+- Audited with axe-core (WCAG 2.0/2.1/2.2 A + AA and best-practice rules) on every page at 1440px and 390px: 0 violations. Also checked 320px reflow, heading order, keyboard navigation (skip link, dropdowns, Escape, mobile menu), and form error states.
+- Motion respects `prefers-reduced-motion`; the DATA->TADA tiles play once instead of looping.
+- Every page has a unique title and meta description, a canonical URL, Open Graph + Twitter cards (`assets/img/og-image.jpg`), and a JSON-LD `@graph` (Organization, WebSite, WebPage, BreadcrumbList, plus SoftwareApplication, Service, FAQPage, or ContactPage where relevant). Validate at https://validator.schema.org.
+- No `robots.txt` yet (testing). Add one pointing to `sitemap.xml` when ready to launch.
 
 ## Before launch
 

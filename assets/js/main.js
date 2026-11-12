@@ -17,129 +17,21 @@ const SYNCTADA_CONFIG = {
 
 document.documentElement.classList.remove("no-js");
 
-const ICON_CARET = '<svg class="caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>';
 const ARROW = '<span class="arrow" aria-hidden="true">&rarr;</span>';
 
-const LOGO_MARK = `
-<svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-  <rect x="0.5" y="0.5" width="31" height="31" rx="9" fill="#2B3856" stroke="rgba(255,255,255,0.22)"/>
-  <path d="M9 13.2a7.2 7.2 0 0 1 12.6-3.4" fill="none" stroke="#3DED97" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M21.9 6.6l-.1 3.6-3.5-.5" fill="none" stroke="#3DED97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M23 18.8a7.2 7.2 0 0 1-12.6 3.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".9"/>
-  <path d="M10.1 25.4l.1-3.6 3.5.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-  <path d="M16 12.6l.9 2.5 2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9z" fill="#3DED97"/>
-</svg>`;
-
-const BRAND = `<a class="brand" href="/" aria-label="SyncTada home">${LOGO_MARK}<span class="brand-word">Sync<span>Tada</span></span></a>`;
-
-function headerHTML() {
-  return `
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="container nav">
-    ${BRAND}
-    <ul class="nav-links" id="nav-links">
-      <li class="has-dropdown" data-section="platform">
-        <button type="button" aria-expanded="false">Platform ${ICON_CARET}</button>
-        <div class="dropdown">
-          <a href="/platform/"><strong>Platform overview</strong><span>How the software fits together</span></a>
-          <a href="/platform/#attribution"><strong>Attribution &amp; measurement</strong><span>Connect campaigns to customers and revenue</span></a>
-          <a href="/platform/#tracking"><strong>Tracking &amp; data sync</strong><span>CRM, ad platforms, server-side events</span></a>
-          <a href="/platform/#optimization"><strong>Optimization &amp; insights</strong><span>Better signals, smarter recommendations</span></a>
-          <a href="/platform/#reporting"><strong>Dashboards &amp; reporting</strong><span>White-label, client-ready results</span></a>
-        </div>
-      </li>
-      <li><a href="/services/" data-section="services">Services</a></li>
-      <li class="has-dropdown" data-section="solutions">
-        <button type="button" aria-expanded="false">Solutions ${ICON_CARET}</button>
-        <div class="dropdown">
-          <a href="/solutions/agencies/"><strong>Agencies</strong><span>Prove it. Improve it. Retain them.</span></a>
-          <a href="/solutions/marketers/"><strong>Marketing professionals</strong><span>In-house and independent marketers</span></a>
-          <a href="/solutions/business-owners/"><strong>Business owners</strong><span>See what your marketing produces</span></a>
-        </div>
-      </li>
-      <li><a href="/how-it-works/" data-section="how-it-works">How It Works</a></li>
-      <li><a href="/contact/" data-section="contact">Contact</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a class="btn btn-primary btn-sm" href="/book-demo/">Book a Demo</a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-  </div>`;
-}
-
-function footerHTML() {
-  const year = new Date().getFullYear();
-  return `
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        ${BRAND}
-        <p class="footer-tag"><strong>From Data to Tada!</strong><br>Marketing attribution, optimization and white-label reporting, backed by a hands-on team.</p>
-        <a class="btn btn-primary btn-sm" href="/book-demo/">Book a Demo ${ARROW}</a>
-      </div>
-      <div>
-        <h4>Platform</h4>
-        <ul>
-          <li><a href="/platform/#attribution">Attribution</a></li>
-          <li><a href="/platform/#tracking">Tracking &amp; data sync</a></li>
-          <li><a href="/platform/#optimization">Optimization</a></li>
-          <li><a href="/platform/#reporting">White-label reporting</a></li>
-          <li><a href="/services/">Hands-on services</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Solutions</h4>
-        <ul>
-          <li><a href="/solutions/agencies/">Agencies</a></li>
-          <li><a href="/solutions/marketers/">Marketing professionals</a></li>
-          <li><a href="/solutions/business-owners/">Business owners</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/how-it-works/">How it works</a></li>
-          <li><a href="/book-demo/">Book a demo</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/terms/">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; ${year} SyncTada. All rights reserved.</span>
-      <span>Powerful software. Hands-on experts. An extension of your team.</span>
-    </div>
-  </div>`;
-}
-
-function mountChrome() {
-  const header = document.getElementById("site-header");
-  const footer = document.getElementById("site-footer");
-  if (header) { header.className = "site-header"; header.innerHTML = headerHTML(); }
-  if (footer) { footer.className = "site-footer"; footer.innerHTML = footerHTML(); }
+function initChrome() {
+  document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
 
   // Mobile sticky CTA (skipped on the booking page itself)
-  if (!document.body.dataset.page || document.body.dataset.page !== "book-demo") {
-    const m = document.createElement("div");
+  if (document.body.dataset.page !== "book-demo") {
+    const m = document.createElement("aside");
     m.className = "mobile-cta";
+    m.setAttribute("aria-label", "Book a demo shortcut");
     m.innerHTML = `<a class="btn btn-primary" href="/book-demo/">Book a Demo ${ARROW}</a>`;
     document.body.appendChild(m);
     const onScroll = () => m.classList.toggle("show", window.scrollY > 520);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-  }
-
-  // Active nav state
-  const page = document.body.dataset.section;
-  if (page && header) {
-    header.querySelectorAll("[data-section]").forEach((el) => {
-      if (el.dataset.section !== page) return;
-      if (el.tagName === "A") el.setAttribute("aria-current", "page");
-      else el.classList.add("is-active");
-    });
   }
 }
 
@@ -150,7 +42,6 @@ function initNav() {
   toggle.addEventListener("click", () => {
     const open = header.classList.toggle("menu-open");
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   });
 
   header.querySelectorAll(".has-dropdown > button").forEach((btn) => {
@@ -165,19 +56,37 @@ function initNav() {
       if (!wasOpen) { li.classList.add("open"); btn.setAttribute("aria-expanded", "true"); }
     });
   });
-  document.addEventListener("click", (e) => {
-    if (!header.contains(e.target)) {
-      header.querySelectorAll(".has-dropdown.open").forEach((o) => o.classList.remove("open"));
-    }
+  const closeAll = () => header.querySelectorAll(".has-dropdown.open").forEach((o) => {
+    o.classList.remove("open");
+    o.querySelector("button").setAttribute("aria-expanded", "false");
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+    if (e.key !== "Escape") return;
+    const openDd = header.querySelector(".has-dropdown.open");
+    if (openDd) { closeAll(); openDd.querySelector("button").focus(); return; }
+    if (header.classList.contains("menu-open")) {
       header.classList.remove("menu-open");
-      header.querySelectorAll(".has-dropdown.open").forEach((o) => o.classList.remove("open"));
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.focus();
     }
   });
+  document.addEventListener("click", (e) => {
+    if (!header.contains(e.target)) closeAll();
+  });
+  // Close a desktop dropdown when keyboard focus leaves it
+  header.querySelectorAll(".has-dropdown").forEach((li) => {
+    li.addEventListener("focusout", (e) => {
+      if (!li.contains(e.relatedTarget)) {
+        li.classList.remove("open");
+        li.querySelector("button").setAttribute("aria-expanded", "false");
+      }
+    });
+  });
   // Close mobile menu after following an in-page link
-  header.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("click", () => header.classList.remove("menu-open")));
+  header.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("click", () => {
+    header.classList.remove("menu-open");
+    toggle.setAttribute("aria-expanded", "false");
+  }));
 }
 
 function initReveal() {
@@ -191,26 +100,28 @@ function initReveal() {
   els.forEach((el) => io.observe(el));
 }
 
-/* DATA -> TADA: the same four letters, rearranged. */
+/* DATA -> TADA: the same four letters, rearranged. Plays once when visible. */
 function initDataTada() {
   document.querySelectorAll(".datatada").forEach((wrap) => {
     const tiles = [...wrap.querySelectorAll(".tile")]; // D A T A
     if (tiles.length !== 4) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      wrap.classList.add("is-tada");
+    const finish = () => { wrap.classList.add("is-tada"); };
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
       tiles[0].textContent = "T"; tiles[2].textContent = "D";
+      finish();
       return;
     }
-    const swap = () => {
-      // Swap positions of D (0) and T (2)
-      const w = tiles[0].getBoundingClientRect().width + 3;
-      const tada = wrap.classList.contains("is-tada");
-      tiles[0].style.transform = tada ? "" : `translateX(${w * 2}px)`;
-      tiles[2].style.transform = tada ? "" : `translateX(${-w * 2}px)`;
-      wrap.classList.toggle("is-tada");
-    };
-    setTimeout(swap, 1200);
-    setInterval(swap, 4200);
+    const io = new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      setTimeout(() => {
+        const w = tiles[0].getBoundingClientRect().width + 3;
+        tiles[0].style.transform = `translateX(${w * 2}px)`;
+        tiles[2].style.transform = `translateX(${-w * 2}px)`;
+        finish();
+      }, 700);
+    }, { threshold: 0.6 });
+    io.observe(wrap);
   });
 }
 
@@ -236,8 +147,11 @@ function initScheduler() {
 function initForms() {
   document.querySelectorAll("form[data-st-form]").forEach((form) => {
     const status = form.querySelector(".form-status");
+    form.addEventListener("input", (e) => { if (e.target.checkValidity()) e.target.removeAttribute("aria-invalid"); });
+    form.addEventListener("change", (e) => { if (e.target.checkValidity()) e.target.removeAttribute("aria-invalid"); });
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      form.querySelectorAll("input, select, textarea").forEach((f) => f.setAttribute("aria-invalid", String(!f.checkValidity())));
       if (!form.reportValidity()) return;
       const data = Object.fromEntries(new FormData(form).entries());
       data.form = form.dataset.stForm;
@@ -286,7 +200,7 @@ function initContactLinks() {
   });
 }
 
-mountChrome();
+initChrome();
 initNav();
 initContactLinks();
 initReveal();
